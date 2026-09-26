@@ -1,1 +1,21 @@
-companies: []
+companies:
+  - name: "Open Text Corp."
+    aliases: ["OpenText", "OTEX", "Open Text Corporation"]
+    ticker: "OTEX"
+    exchange: "TSX"
+    sector: "ai_cloud"
+    date_added: "2026-09-26"
+
+  - name: "BlackBerry Ltd."
+    aliases: ["BlackBerry", "BB", "BlackBerry Limited"]
+    ticker: "BB"
+    exchange: "TSX"
+    sector: "ai_cloud"
+    date_added: "2026-09-26"
+
+  - name: "Orion Digital Corp."
+    aliases: ["Orion Digital", "ORIO", "Mogo", "Mogo Inc."]  # renamed from Mogo Dec 2025 — old name likely still in older source text
+    ticker: "ORIO"
+    exchange: "TSX"
+    sector: "fintech"
+    date_added: "2026-09-26"
