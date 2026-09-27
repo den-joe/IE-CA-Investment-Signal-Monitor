@@ -1,3 +1,4 @@
+import re
 from pathlib import Path
 
 import yaml
@@ -12,10 +13,9 @@ def load_companies() -> list[dict]:
 
 
 def match_company(text: str, companies: list[dict]) -> str | None:
-    text_lower = text.lower()
     for company in companies:
         names_to_check = [company["name"], *company["aliases"]]
         for name in names_to_check:
-            if name.lower() in text_lower:
+            if re.search(rf"\b{re.escape(name)}\b", text, re.IGNORECASE):
                 return company["name"]
     return None
