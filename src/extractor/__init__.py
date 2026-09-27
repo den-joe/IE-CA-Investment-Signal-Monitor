@@ -1,3 +1,4 @@
+from .assemble import assemble_record
 from .company_matcher import load_companies, match_company
 from .parse_gac import parse_gac_entries
 from .parse_negative_space import parse_negative_space_entries
@@ -5,6 +6,7 @@ from .parse_news import parse_news_entries
 from .tier_classifier import classify_tier
 
 __all__ = [
+    "assemble_record",
     "classify_tier",
     "load_companies",
     "match_company",
