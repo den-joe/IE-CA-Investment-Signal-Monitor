@@ -1,0 +1,30 @@
+# ILLUSTRATIVE ONLY. Fictional companies used to show the dashboard's
+# populated states. Never mix with config/companies.yaml.
+companies:
+  - name: "Example Corp."
+    aliases: ["ExampleCo", "EXMP"]
+    ticker: "EXMP"
+    exchange: "TSX"
+    sector: "ai_cloud"
+    date_added: "2026-09-26"
+
+  - name: "Fictional Cloud Systems Inc."
+    aliases: ["Fictional Cloud"]
+    ticker: "FCSX"
+    exchange: "TSXV"
+    sector: "ai_cloud"
+    date_added: "2026-09-26"
+
+  - name: "Sample Biotech Inc."
+    aliases: ["Sample Bio"]
+    ticker: "SMPB"
+    exchange: "TSX"
+    sector: "life_sciences"
+    date_added: "2026-09-26"
+
+  - name: "Placeholder Payments Ltd."
+    aliases: ["Placeholder Pay"]
+    ticker: "PLPY"
+    exchange: "TSX"
+    sector: "fintech"
+    date_added: "2026-09-26"

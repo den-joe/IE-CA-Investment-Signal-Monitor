@@ -3,3 +3,4 @@ langchain
 requests
 python-dotenv
 pyyaml
+streamlit

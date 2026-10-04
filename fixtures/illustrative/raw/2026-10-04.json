@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-04",
+  "entries": [
+    {
+      "signal_text": "[Illustrative] Example Corp. said in its quarterly investor letter that it is evaluating a sovereign-cloud facility in Ireland to serve EU public-sector customers, with a site decision expected next year.",
+      "date_mentioned": "2026-10-01T13:00:00Z",
+      "source_url": "https://example.com/illustrative/example-corp-investor-letter",
+      "source": "News API (corroboration)",
+      "fetched_at": "2026-10-04T09:00:02.100000",
+      "query": "Example Corp."
+    },
+    {
+      "signal_text": "[Illustrative] Sample Biotech Inc. is listed among the delegates on a Canadian trade mission to Cork focused on biopharma manufacturing partnerships.",
+      "date_mentioned": "2026-09-30T10:15:00-04:00",
+      "source_url": "https://example.org/illustrative/trade-mission-cork-delegates",
+      "source": "Global Affairs Canada",
+      "fetched_at": "2026-10-04T09:00:00.500000"
+    },
+    {
+      "signal_text": "[Illustrative] Fictional Cloud Systems Inc. registered an EU subsidiary, according to a trade press report.",
+      "date_mentioned": "2026-09-29T08:00:00Z",
+      "source_url": "https://example.com/illustrative/fictional-cloud-eu-subsidiary",
+      "source": "News API (corroboration)",
+      "fetched_at": "2026-10-04T09:00:02.300000",
+      "query": "Fictional Cloud Systems Inc."
+    },
+    {
+      "signal_text": "[Illustrative] Placeholder Payments Ltd. has posted job listings for a Head of EU Compliance and two payments engineers based in Dublin.",
+      "date_mentioned": "2026-10-02T16:40:00Z",
+      "source_url": "https://example.com/illustrative/placeholder-payments-dublin-roles",
+      "source": "News API (corroboration)",
+      "fetched_at": "2026-10-04T09:00:02.500000",
+      "query": "Placeholder Payments Ltd."
+    },
+    {
+      "signal_text": "[Illustrative] Sample Biotech Inc. is hiring a Director of European Regulatory Affairs.",
+      "date_mentioned": "2026-10-03T09:00:00Z",
+      "source_url": "https://example.com/illustrative/sample-biotech-eu-regulatory-role",
+      "source": "News API (corroboration)",
+      "fetched_at": "2026-10-04T09:00:02.400000",
+      "query": "Sample Biotech Inc."
+    },
+    {
+      "signal_text": "[Illustrative] A joint EU-Canada statement on digital trade names Example Corp. among firms attending a CETA roundtable.",
+      "date_mentioned": "2026-09-27T12:00:00-04:00",
+      "source_url": "https://example.org/illustrative/ceta-digital-roundtable",
+      "source": "Global Affairs Canada",
+      "fetched_at": "2026-10-04T09:00:00.600000"
+    },
+    {
+      "signal_text": "[Illustrative] Placeholder Payments Ltd. reported quarterly revenue in line with analyst expectations.",
+      "date_mentioned": "2026-09-28T21:00:00Z",
+      "source_url": "https://example.com/illustrative/placeholder-payments-quarterly",
+      "source": "News API (corroboration)",
+      "fetched_at": "2026-10-04T09:00:02.600000",
+      "query": "Placeholder Payments Ltd."
+    },
+    {
+      "signal_text": "[Illustrative] Minister announces consultation on Canada-EU critical minerals cooperation.",
+      "date_mentioned": "2026-10-02T11:00:00-04:00",
+      "source_url": "https://example.org/illustrative/critical-minerals-consultation",
+      "source": "Global Affairs Canada",
+      "fetched_at": "2026-10-04T09:00:00.700000"
+    },
+    {
+      "signal_text": "[Illustrative] Media advisory for a trade event in Ottawa.",
+      "date_mentioned": "2026-10-01T09:00:00-04:00",
+      "source_url": "https://example.org/illustrative/ottawa-media-advisory",
+      "source": "Global Affairs Canada",
+      "fetched_at": "2026-10-04T09:00:00.800000"
+    },
+    {
+      "signal_text": "[Illustrative] Inward-investment agency welcomes a new 50-job software centre in Galway from an unnamed European firm.",
+      "date_mentioned": "24/09/2026",
+      "source_url": "",
+      "source": "IE inward-investment agency",
+      "fetched_at": "2026-10-04T09:00:01.000000"
+    },
+    {
+      "signal_text": "[Illustrative] Inward-investment agency publishes its half-year results.",
+      "date_mentioned": "14/09/2026",
+      "source_url": "https://example.org/illustrative/agency-half-year-results",
+      "source": "IE inward-investment agency",
+      "fetched_at": "2026-10-04T09:00:01.100000"
+    },
+    {
+      "signal_text": "[Illustrative] An unrelated cloud vendor launches a new data product � story mentions no tracked company.",
+      "date_mentioned": "2026-10-03T07:30:00Z",
+      "source_url": "https://example.com/illustrative/unrelated-cloud-launch",
+      "source": "News API (corroboration)",
+      "fetched_at": "2026-10-04T09:00:02.700000",
+      "query": "Example Corp."
+    }
+  ]
+}

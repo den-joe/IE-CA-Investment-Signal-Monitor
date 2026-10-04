@@ -1,0 +1,85 @@
+{
+  "date": "2026-10-04",
+  "records": [
+    {
+      "company": "Example Corp.",
+      "sector": "ai_cloud",
+      "signal_text": "[Illustrative] Example Corp. said in its quarterly investor letter that it is evaluating a sovereign-cloud facility in Ireland to serve EU public-sector customers, with a site decision expected next year.",
+      "tier": 1,
+      "date_mentioned": "2026-10-01T13:00:00Z",
+      "source_url": "https://example.com/illustrative/example-corp-investor-letter",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 2,400,000,000 meets the threshold"
+    },
+    {
+      "company": "Sample Biotech Inc.",
+      "sector": "life_sciences",
+      "signal_text": "[Illustrative] Sample Biotech Inc. is listed among the delegates on a Canadian trade mission to Cork focused on biopharma manufacturing partnerships.",
+      "tier": 2,
+      "date_mentioned": "2026-09-30T10:15:00-04:00",
+      "source_url": "https://example.org/illustrative/trade-mission-cork-delegates",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 910,000,000 meets the threshold"
+    },
+    {
+      "company": "Fictional Cloud Systems Inc.",
+      "sector": "ai_cloud",
+      "signal_text": "[Illustrative] Fictional Cloud Systems Inc. registered an EU subsidiary, according to a trade press report.",
+      "tier": 2,
+      "date_mentioned": "2026-09-29T08:00:00Z",
+      "source_url": "https://example.com/illustrative/fictional-cloud-eu-subsidiary",
+      "gate_passed": false,
+      "gate_reason": "Market cap CAD 120,000,000 is below the CAD 500,000,000 threshold"
+    },
+    {
+      "company": "Placeholder Payments Ltd.",
+      "sector": "fintech",
+      "signal_text": "[Illustrative] Placeholder Payments Ltd. has posted job listings for a Head of EU Compliance and two payments engineers based in Dublin.",
+      "tier": 3,
+      "date_mentioned": "2026-10-02T16:40:00Z",
+      "source_url": "https://example.com/illustrative/placeholder-payments-dublin-roles",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 640,000,000 meets the threshold"
+    },
+    {
+      "company": "Sample Biotech Inc.",
+      "sector": "life_sciences",
+      "signal_text": "[Illustrative] Sample Biotech Inc. is hiring a Director of European Regulatory Affairs.",
+      "tier": 3,
+      "date_mentioned": "2026-10-03T09:00:00Z",
+      "source_url": "https://example.com/illustrative/sample-biotech-eu-regulatory-role",
+      "gate_passed": false,
+      "gate_reason": "No market cap data returned (possibly delisted)"
+    },
+    {
+      "company": "Example Corp.",
+      "sector": "ai_cloud",
+      "signal_text": "[Illustrative] A joint EU-Canada statement on digital trade names Example Corp. among firms attending a CETA roundtable.",
+      "tier": 4,
+      "date_mentioned": "2026-09-27T12:00:00-04:00",
+      "source_url": "https://example.org/illustrative/ceta-digital-roundtable",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 2,400,000,000 meets the threshold"
+    },
+    {
+      "company": "Placeholder Payments Ltd.",
+      "sector": "fintech",
+      "signal_text": "[Illustrative] Placeholder Payments Ltd. reported quarterly revenue in line with analyst expectations.",
+      "tier": 0,
+      "date_mentioned": "2026-09-28T21:00:00Z",
+      "source_url": "https://example.com/illustrative/placeholder-payments-quarterly",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 640,000,000 meets the threshold"
+    },
+    {
+      "company": "Example Corp.",
+      "sector": "ai_cloud",
+      "signal_text": "[Illustrative] Example Corp.’s CEO speaks at a domestic investor conference � remarks were about product roadmap only.",
+      "tier": 0,
+      "date_mentioned": "Autumn 2026",
+      "source_url": "https://example.com/illustrative/not-in-raw-file",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 2,400,000,000 meets the threshold"
+    }
+  ]
+}

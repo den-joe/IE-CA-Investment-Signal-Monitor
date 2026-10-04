@@ -9,6 +9,7 @@ from src.collector import (
     fetch_negative_space_source,
     fetch_news_corroboration,
 )
+from src.collector.gac import FetchResult
 from src.extractor import (
     assemble_record,
     load_companies,
@@ -18,7 +19,7 @@ from src.extractor import (
 )
 from src.digest import generate_digest
 from src.scorer import check_market_cap_gate
-from src.storage import load_seen_keys, write_run
+from src.storage import load_seen_keys, write_raw_entries, write_run
 
 
 class GraphState(TypedDict):
@@ -27,16 +28,25 @@ class GraphState(TypedDict):
     digest: str
 
 
+def tag_entries(
+    entries: list[dict], fetch_result: FetchResult, query: str | None = None
+) -> list[dict]:
+    tags = {"source": fetch_result["source"], "fetched_at": fetch_result["timestamp"]}
+    if query is not None:
+        tags["query"] = query
+    return [{**entry, **tags} for entry in entries]
+
+
 def collect_gac(state: GraphState) -> dict:
     fetch_result = fetch_gac_listings()
     entries = parse_gac_entries(fetch_result["raw_content"])
-    return {"raw_entries": entries}
+    return {"raw_entries": tag_entries(entries, fetch_result)}
 
 
 def collect_negative_space(state: GraphState) -> dict:
     fetch_result = fetch_negative_space_source()
     entries = parse_negative_space_entries(fetch_result["raw_content"])
-    return {"raw_entries": entries}
+    return {"raw_entries": tag_entries(entries, fetch_result)}
 
 
 def collect_news(state: GraphState) -> dict:
@@ -44,7 +54,8 @@ def collect_news(state: GraphState) -> dict:
     all_entries = []
     for company in companies:
         fetch_result = fetch_news_corroboration(company["name"])
-        all_entries.extend(parse_news_entries(fetch_result["raw_content"]))
+        entries = parse_news_entries(fetch_result["raw_content"])
+        all_entries.extend(tag_entries(entries, fetch_result, query=company["name"]))
     return {"raw_entries": all_entries}
 
 
@@ -54,6 +65,11 @@ def check_for_new_signals(state: GraphState) -> dict:
 
 def route_after_collection(state: GraphState) -> str:
     return "continue" if state["raw_entries"] else "skip"
+
+
+def save_raw_entries(state: GraphState) -> dict:
+    write_raw_entries(state["raw_entries"])
+    return {}
 
 
 def extract_signals(state: GraphState) -> dict:
@@ -107,6 +123,7 @@ builder.add_node("collect_gac", collect_gac)
 builder.add_node("collect_negative_space", collect_negative_space)
 builder.add_node("collect_news", collect_news)
 builder.add_node("check_for_new_signals", check_for_new_signals)
+builder.add_node("save_raw_entries", save_raw_entries)
 builder.add_node("extract_signals", extract_signals)
 builder.add_node("filter_seen_records", filter_seen_records)
 builder.add_node("score_gate", score_gate)
@@ -124,9 +141,10 @@ builder.add_edge("collect_news", "check_for_new_signals")
 builder.add_conditional_edges(
     "check_for_new_signals",
     route_after_collection,
-    {"continue": "extract_signals", "skip": "generate_digest_node"},
+    {"continue": "save_raw_entries", "skip": "generate_digest_node"},
 )
 
+builder.add_edge("save_raw_entries", "extract_signals")
 builder.add_edge("extract_signals", "filter_seen_records")
 builder.add_edge("filter_seen_records", "score_gate")
 builder.add_edge("score_gate", "persist_run")
