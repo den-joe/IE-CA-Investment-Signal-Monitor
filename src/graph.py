@@ -18,6 +18,7 @@ from src.extractor import (
 )
 from src.digest import generate_digest
 from src.scorer import check_market_cap_gate
+from src.storage import load_seen_keys, write_run
 
 
 class GraphState(TypedDict):
@@ -62,6 +63,14 @@ def extract_signals(state: GraphState) -> dict:
     return {"records": records}
 
 
+def filter_seen_records(state: GraphState) -> dict:
+    seen = load_seen_keys()
+    new_records = [
+        r for r in state["records"] if (r["company"], r["source_url"]) not in seen
+    ]
+    return {"records": new_records}
+
+
 def score_gate(state: GraphState) -> dict:
     companies = load_companies()
     companies_by_name = {c["name"]: c for c in companies}
@@ -84,6 +93,11 @@ def score_gate(state: GraphState) -> dict:
     return {"records": updated_records}
 
 
+def persist_run(state: GraphState) -> dict:
+    write_run(state["records"])
+    return {}
+
+
 def generate_digest_node(state: GraphState) -> dict:
     return {"digest": generate_digest(state.get("records", []))}
 
@@ -94,7 +108,9 @@ builder.add_node("collect_negative_space", collect_negative_space)
 builder.add_node("collect_news", collect_news)
 builder.add_node("check_for_new_signals", check_for_new_signals)
 builder.add_node("extract_signals", extract_signals)
+builder.add_node("filter_seen_records", filter_seen_records)
 builder.add_node("score_gate", score_gate)
+builder.add_node("persist_run", persist_run)
 builder.add_node("generate_digest_node", generate_digest_node)
 
 builder.add_edge(START, "collect_gac")
@@ -111,8 +127,10 @@ builder.add_conditional_edges(
     {"continue": "extract_signals", "skip": "generate_digest_node"},
 )
 
-builder.add_edge("extract_signals", "score_gate")
-builder.add_edge("score_gate", "generate_digest_node")
+builder.add_edge("extract_signals", "filter_seen_records")
+builder.add_edge("filter_seen_records", "score_gate")
+builder.add_edge("score_gate", "persist_run")
+builder.add_edge("persist_run", "generate_digest_node")
 builder.add_edge("generate_digest_node", END)
 
 graph = builder.compile()
