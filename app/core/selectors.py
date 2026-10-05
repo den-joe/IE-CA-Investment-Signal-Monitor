@@ -53,6 +53,10 @@ def filter_findings(findings: tuple[Finding, ...] | list[Finding], flt: FindingF
     return result
 
 
+def count_by_tier(findings: tuple[Finding, ...] | list[Finding]) -> dict[int, int]:
+    return dict(Counter(f.tier for f in findings))
+
+
 def _sortable_date(f: Finding) -> datetime:
     """Unparseable dates sort last. The timezone is dropped so that naive IDA
     dates and offset-aware news dates can be compared at all."""

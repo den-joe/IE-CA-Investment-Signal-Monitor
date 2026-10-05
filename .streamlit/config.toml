@@ -1,14 +1,15 @@
 # Theme for the analyst dashboard. Streamlit's own light/dark switch stays on;
 # only the accent, type and corner radius are set here.
 #
-# Type: Public Sans (a public-sector design-system face, sober and legible at
-# small sizes) for body text; Source Serif 4 for headings, for an editorial,
-# case-file register. Both load from Google Fonts. With no network, Streamlit
-# falls back to its default sans-serif / serif.
+# Type: one family, Public Sans (a public-sector design-system face, sober and
+# legible at small sizes), loaded from Google Fonts. With no network,
+# Streamlit falls back to its default sans-serif.
+# A serif heading font (Source Serif 4) was tried; Streamlit 1.65 did not
+# apply a second remote font via headingFont, so it was dropped rather than
+# forced with custom CSS.
 
 [theme]
 font = "Public Sans:https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600&display=swap, sans-serif"
-headingFont = "Source Serif 4:https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600&display=swap, serif"
 headingFontSizes = ["2rem", "1.5rem", "1.2rem", "1rem", "0.9rem", "0.85rem"]
 baseRadius = "small"
 

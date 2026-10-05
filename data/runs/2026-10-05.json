@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-05",
+  "records": [
+    {
+      "company": "BlackBerry Ltd.",
+      "sector": "ai_cloud",
+      "signal_text": "BlackBerry chief says general QNX rollout is 'at the beginning of second inning' BlackBerry Ltd.\u2019s QNX software is continuing to drive the company\u2019s business forward as the Canadian tech pioneer beat analysts\u2019 expectations in the second quarter and raised its full-year revenue outlook. \n The Waterloo, Ont.-based company said Thursday that\u2026",
+      "tier": 0,
+      "date_mentioned": "2026-09-25T18:52:59Z",
+      "source_url": "https://biztoc.com/x/f867636e3a04a5d6",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 7,766,436,352 meets the threshold"
+    },
+    {
+      "company": "BlackBerry Ltd.",
+      "sector": "ai_cloud",
+      "signal_text": "BlackBerry chief says general QNX rollout is \u2018at the beginning of second inning\u2019 BlackBerry Ltd.\u2019s QNX software is continuing to drive the company\u2019s business forward as the Canadian tech pioneer\u00a0beat expectations. Read on",
+      "tier": 0,
+      "date_mentioned": "2026-09-25T18:45:17Z",
+      "source_url": "https://financialpost.com/technology/blackberry-chief-qnx-rollout-at-beginning-second-inning",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 7,766,436,352 meets the threshold"
+    },
+    {
+      "company": "BlackBerry Ltd.",
+      "sector": "ai_cloud",
+      "signal_text": "BlackBerry results exceed expectations as company boosts forecast for second time this year BlackBerry Ltd. BB-T reported stronger-than-expected second-quarter results Thursday and increased its financial forecasts for the second time this fiscal year.\nThe company, based in Waterloo, Ont., said it generated US$163-million in revenue in the quarter e\u2026",
+      "tier": 0,
+      "date_mentioned": "2026-09-24T11:21:46Z",
+      "source_url": "https://biztoc.com/x/53a5f0fa2bdc872c",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 7,766,436,352 meets the threshold"
+    },
+    {
+      "company": "BlackBerry Ltd.",
+      "sector": "ai_cloud",
+      "signal_text": "BlackBerry's Q2 sales surge 26% to $163M BlackBerry Ltd. announced in its earnings report for the second quarter of fiscal 2027 on Thursday that its revenue grew by 26% year-on-year to $163 million. Net income soared 155% to $33.9 million, w...",
+      "tier": 0,
+      "date_mentioned": "2026-09-24T11:07:04Z",
+      "source_url": "https://biztoc.com/x/d04da5dd393c0d86",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 7,766,436,352 meets the threshold"
+    },
+    {
+      "company": "BlackBerry Ltd.",
+      "sector": "ai_cloud",
+      "signal_text": "BlackBerry Jumps 7% as Coretura Selects QNX-Based Alloy Kore for Truck Platform; Aptiv Edges Higher, Mobileye Barely Budges Coretura just handed BlackBerry its first named design win for Alloy Kore, sending shares surging well past the broader software sector, but the deal comes w...",
+      "tier": 0,
+      "date_mentioned": "2026-09-22T12:54:55Z",
+      "source_url": "https://247wallst.com/investing/2026/09/22/blackberry-jumps-7-as-coretura-selects-qnx-based-alloy-kore-for-truck-platform-aptiv-edges-higher-mobileye-barely-budges/",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 7,766,436,352 meets the threshold"
+    },
+    {
+      "company": "BlackBerry Ltd.",
+      "sector": "ai_cloud",
+      "signal_text": "BlackBerry secures $100-million deal for new automotive software, Alloy Kore BlackBerry Ltd. BB-T has secured a US$100-million-plus deal for its new Alloy Kore automotive software with Coretura AB, a joint venture between truck-making giants Daimler Truck and Volvo Group.\nIt\u2019s a watershed contract for the Waterloo, Ont.-based technolo\u2026",
+      "tier": 0,
+      "date_mentioned": "2026-09-22T06:45:17Z",
+      "source_url": "https://biztoc.com/x/86c15a43c8ab12bd",
+      "gate_passed": true,
+      "gate_reason": "Market cap CAD 7,766,436,352 meets the threshold"
+    },
+    {
+      "company": "Orion Digital Corp.",
+      "sector": "fintech",
+      "signal_text": "Orion Digital Regains Compliance with Nasdaq\u2019s Minimum Bid Price Requirement VANCOUVER, British Columbia \u2014 Orion Digital Corp. (NASDAQ: ORIO; TSX: ORIO) (\u201cOrion Digital\u201d or the \u201cCompany\u201d) today announced that it received formal written confirmation from The Nasdaq Stock Market, LLC (\u201cNasdaq\u201d) confirming that the Company has regained c\u2026",
+      "tier": 0,
+      "date_mentioned": "2026-09-28T21:59:09Z",
+      "source_url": "https://financialpost.com/pmn/business-wire-news-releases-pmn/orion-digital-regains-compliance-with-nasdaqs-minimum-bid-price-requirement",
+      "gate_passed": false,
+      "gate_reason": "Market cap CAD 35,385,736 is below the CAD 500,000,000 threshold"
+    }
+  ]
+}
